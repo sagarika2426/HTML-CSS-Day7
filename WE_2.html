@@ -7,7 +7,7 @@
   <style>
     #heading{
       width: 40%;
-      height: 200px;
+      /* height: 200px; */
       /* border: 1px solid black; */
       margin: auto;
       text-align: center;
@@ -100,14 +100,59 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
-        /* gap: 20px; */
+        gap: 20px;
         width: 100%;
+        
       }
 
       #mainbox >div{
       /* border: 1px solid red; */
-      width: 70%;
+      width: 90%;
+      height: 380px;
       }
+
+      #heading{
+      width: 100%;
+      }
+
+      #heading >h1{
+      font-size: 35px;
+    }
+
+    #heading >p{
+      font-size: 19px;
+    }
+
+    }
+
+    /* for small screen */
+    @media all and (min-width:80px) and (max-width:450px){
+      #mainbox{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 20px;
+        width: 80%;
+      }
+
+      #mainbox >div{
+      /* border: 1px solid red; */
+      width: 90%;
+      height: 370px;
+
+      }
+
+      #heading{
+      width: 100%;
+      }
+
+      #heading >h1{
+      font-size: 30px;
+    }
+
+    #heading >p{
+      font-size: 16px;
+    }
 
     }
 
@@ -125,7 +170,7 @@
   <div id="mainbox">
     <!-- box1 -->
     <div>
-      <h3>Baic Plan</h3>
+      <h3>Basic Plan</h3>
       <div>
         <h2 id="green">Free</h2>
         <p class="per_month">Per month</p>
