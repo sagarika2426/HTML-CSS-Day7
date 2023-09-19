@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Layout</title>
+  <style>
+    #heading{
+      width: 40%;
+      height: 200px;
+      /* border: 1px solid black; */
+      margin: auto;
+      text-align: center;
+    
+    }
+    #heading >h1{
+      font-size: 42px;
+    }
+    #heading > p{
+      color: gray;
+      margin-top: -13px;
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    #mainbox{
+      height: 400px;
+      width: 70%;
+      /* border: 1px solid black; */
+      margin: auto;
+      margin-top: 50px;
+      display: flex;
+      text-align: center;
+    }
+
+    #mainbox >div{
+      /* border: 1px solid red; */
+      width: 30%;
+      height: 100%;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    #mainbox>div>h3{
+      text-align: center;
+    }
+    #mainbox>div>div{
+      text-align: center;
+    }
+  
+
+    .per_month{
+      margin-top: -10px;
+      font-style: italic;
+    }
+
+    .box_content{
+      height: 100px;
+      width: 90%;
+      /* border: 1px solid red; */
+      margin: auto;
+    }
+
+    .box_content >p{
+      text-align: center;
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    
+
+    button{
+      color: #1e1bce;
+      padding: 15px 40px 15px 40px;
+      background-color: white;
+      margin-top: 60px;
+      font-size: 20px;
+      border-radius: 10px;
+      border: 1px solid #1e1bce
+    }
+
+    button:hover{
+      background-color: #1e1bce;
+      color: white;
+    }
+
+    #orange{
+      color: orange;
+    }
+    #blue{
+      color: #1e1bce;
+    }
+    #green{
+      color: green;
+    }
+
+    /* for medium screen */
+    @media all and (min-width:450px) and (max-width:800px){
+      #mainbox{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        /* gap: 20px; */
+        width: 100%;
+      }
+
+      #mainbox >div{
+      /* border: 1px solid red; */
+      width: 70%;
+      }
+
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="heading">
+    <h1>Choose a plan that right for your business</h1>
+
+    <p>We collect reviews from our users so you can get an honest opinion if what an experince with our website are really like !</p>
+
+  </div>
+
+  <div id="mainbox">
+    <!-- box1 -->
+    <div>
+      <h3>Baic Plan</h3>
+      <div>
+        <h2 id="green">Free</h2>
+        <p class="per_month">Per month</p>
+      </div>
+
+      <div class="box_content">
+        <p>Get started with the industry-standard React UI library, MIT-licensed.</p>
+      </div>
+
+      <div>
+        <button><b>Start Now</b></button>
+      </div>
+    </div>
+
+     <!-- box2 -->
+    <div>
+      <h3 >Pro Plan</h3>
+      <div>
+        <h2 id="orange">$39.00</h2>
+        <p class="per_month">Per month</p>
+      </div>
+
+      <div class="box_content">
+        <p>Best for professional developers building enterprise or data-rich applications.</p>
+      </div>
+
+      <div>
+        <button><b>Start Now</b></button>
+      </div>
+    </div>
+
+     <!-- box3 -->
+    <div>
+      <h3 >Premium Plan</h3>
+      <div>
+        <h2  id="blue">$59.00</h2>
+        <p class="per_month">Per month</p>
+      </div>
+
+      <div class="box_content">
+        <p>The most advanced features for data-rich applications, as well as the highest priority for support.</p>
+      </div>
+
+      <div>
+        <button><b>Start Now</b></button>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
