@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 1</title>
+  <style>
+    #container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 60px 400px;
+      gap: 30px;
+      grid-template-areas: 
+      "nav nav"
+      "b1 b2";
+     
+    }
+    #container>div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container>div:nth-child(1)
+    {
+      grid-area: nav;
+      background-color: yellow;
+    }
+    #container>div:nth-child(2)
+    {
+      grid-area: b1;
+      background-color: peru;
+    }
+    #container>div:nth-child(3)
+    {
+      grid-area: b2;
+      background-color: gray;
+    }
+
+    /* for small screen */
+    @media all and (min-width:80px) and (max-width:500px){
+      #container{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 50px 170px 170px;
+      gap: 25px;
+      grid-template-areas: 
+      "nav"
+      "b1"
+      "b2";
+     
+    }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <div><h2>Nav Bar</h2></div>
+    <div><h3>Box 1</h3></div>
+    <div><h3>Box 2</h3></div>
+  </div>
+  
+</body>
+</html>
