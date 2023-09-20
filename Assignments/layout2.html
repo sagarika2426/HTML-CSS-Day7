@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 2</title>
+  <style>
+    #container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 60px 200px 200px 200px;
+      gap: 30px;
+      grid-template-areas: 
+      "nav nav nav"
+      "b1 b4 b4"
+      "b2 b4 b4"
+      "b3 b4 b4";
+    }
+
+    #container>div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container>div:nth-child(1)
+    {
+      grid-area:nav ;
+      background-color: rgb(152, 149, 149);
+      border: 3px solid black;
+    }
+    #container>div:nth-child(2)
+    {
+      grid-area: b1;
+      
+      background-color: rgb(203, 162, 162);
+    }
+    #container>div:nth-child(3)
+    {
+      grid-area: b2;
+      background-color: lightpink;
+    }
+    #container>div:nth-child(4)
+    {
+      grid-area: b3 ;
+      
+      background-color: rgb(203, 162, 162);
+    }
+    #container>div:nth-child(5)
+    {
+      grid-area: b4;
+      background-color: rgb(239, 115, 115);
+      
+    }
+
+    /* For Medium Screen */
+    @media all and (min-width:500px) and (max-width:800px)
+    {
+      #container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 60px 200px 200px 200px;
+      gap: 30px;
+      grid-template-areas: 
+      "nav nav nav"
+      "b1 b2 b3"
+      "b4 b4 b4"
+      "b4 b4 b4";
+    }
+
+    }
+
+    /* for small Screen */
+    @media all and (min-width:50px) and (max-width:500px)
+    {
+      #container{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 60px 120px 120px 120px 300px;
+      gap: 18px;
+      grid-template-areas: 
+      "nav"
+      "b1"
+      "b2"
+      "b3"
+      "b4"
+    }
+
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div><h1>Nav Bar</h1></div>
+    <div><h3>Box 1</h3></div>
+    <div><h3>Box 2</h3></div>
+    <div><h3>Box 3</h3></div>
+    <div><h3>Box 4</h3></div>
+  </div>
+  
+</body>
+</html>
